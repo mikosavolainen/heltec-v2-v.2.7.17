@@ -1,33 +1,13 @@
-[EN](#en) / [FI](#fi)
+[FI](#fi) / [EN](#en)
+
+> [!WARNING]
+> **Vastuuvapauslauseke:** Tätä laiteohjelmistoa ei ole testattu 100-prosenttisesti Heltec V2 -laitteella. En ota vastuuta, jos rikot laitteesi tai jos tässä laiteohjelmistossa on ongelmia. Käytä omalla vastuullasi.
+>
+> **Disclaimer:** This firmware is not 100% tested with the Heltec V2. I take no responsibility if you brick your device or if this firmware has problems. Use at your own risk.
 
 # Meshtastic 2.7.22 for Heltec V2
 
 This repository provides the compiled firmware for Meshtastic 2.7.22 for the Heltec V2 board, since the official Meshtastic Flasher tool currently only supports Heltec V3.
-
-<a name="en"></a>
-
-## 🚀 Flashing Instructions
-
-### 🔧 1. Putting Heltec V2 into Programming Mode
-
-1. Connect the Heltec V2 to your computer via USB.
-2. Hold the **PRG** (Program) button on the board.
-3. While holding **PRG**, press and release the **RST** (Reset) button.
-4. Release the **PRG** button.
-5. The device is now in bootloader mode and ready to be flashed.
-
-### ✨ 2. Flashing with ESP Web Flasher
-
-1. Go to [ESP Web Flasher](https://esptool.spacehuhn.com).
-2. Click **Connect** and select your Heltec V2 device from the list.
-3. Manually add each file and set the correct address:
-    - `bootloader.bin` → `0x1000`
-    - `partitions.bin` → `0x8000`
-    - `firmware.bin` → `0x10000`
-4. Click **Start** and wait for the process to finish.
-5. Reboot the device once flashing is complete.
-
-![Flashing addresses for Meshtastic on Heltec V2](img/adresses.png "ESP Web Flasher address setup")
 
 ***
 
@@ -54,4 +34,31 @@ This repository provides the compiled firmware for Meshtastic 2.7.22 for the Hel
 4. Napsauta **Start** ja odota, että prosessi on valmis.
 5. Käynnistä laite uudelleen, kun asennus on valmis.
 
-![Meshtasticin flash-osoitteet Heltec V2:lle](img/adresses.png "ESP Web Flasher -osoitteiden asetus")
+![Meshtasticin flash-osoitteet Heltec V2:lle](img/esp-web-flasher-addresses.png "ESP Web Flasher -osoitteiden asetus")
+
+***
+
+<a name="en"></a>
+
+## 🚀 Flashing Instructions
+
+### 🔧 1. Putting Heltec V2 into Programming Mode
+
+1. Connect the Heltec V2 to your computer via USB.
+2. Hold the **PRG** (Program) button on the board.
+3. While holding **PRG**, press and release the **RST** (Reset) button.
+4. Release the **PRG** button.
+5. The device is now in bootloader mode and ready to be flashed.
+
+### ✨ 2. Flashing with ESP Web Flasher
+
+1. Go to [ESP Web Flasher](https://esptool.spacehuhn.com).
+2. Click **Connect** and select your Heltec V2 device from the list.
+3. Manually add each file and set the correct address:
+    - `bootloader.bin` → `0x1000`
+    - `partitions.bin` → `0x8000`
+    - `firmware.bin` → `0x10000`
+4. Click **Start** and wait for the process to finish.
+5. Reboot the device once flashing is complete.
+
+![Flashing addresses for Meshtastic on Heltec V2](img/esp-web-flasher-addresses.png "ESP Web Flasher address setup")
